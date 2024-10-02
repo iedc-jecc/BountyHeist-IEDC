@@ -32,7 +32,9 @@ function Landing() {
       }
 
       leaderboardArray.sort((a, b) => b.coins - a.coins);
-      setLeaderboard(leaderboardArray);
+      const topUsers = leaderboardArray.slice(0, 25);
+
+      setLeaderboard(topUsers);
       setLoading(false);
     });
   }, []);
