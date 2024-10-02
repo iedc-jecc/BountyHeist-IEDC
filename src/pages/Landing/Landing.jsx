@@ -22,13 +22,13 @@ function Landing() {
       const leaderboardArray = [];
       const limit = 25;
 
-      let i = 0;
+      //let i = 0;
       for (let userId in usersData) {
-        if (i >= limit) break;
+        //if (i >= limit) break;
         const coins = usersData[userId]?.coins || 0;
         const username = usersData[userId]?.username;
         leaderboardArray.push({ userId, coins, username });
-        i = i + 1;
+        //i = i + 1;
       }
 
       leaderboardArray.sort((a, b) => b.coins - a.coins);
